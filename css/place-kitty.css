@@ -1,5 +1,24 @@
+img:hover{
+  animation: shake 0.3s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes shake {
+  0% { transform: translate(10px, 10px) rotate(0deg); }
+  10% { transform: translate(-5px, -4px) rotate(-1deg); }
+  20% { transform: translate(-6px, 0px) rotate(1deg); }
+  30% { transform: translate(6px, 4px) rotate(0deg); }
+  40% { transform: translate(4px, -4px) rotate(1deg); }
+  50% { transform: translate(-2px, 4px) rotate(-1deg); }
+  60% { transform: translate(-3px, 1px) rotate(0deg); }
+  70% { transform: translate(3px, 1px) rotate(-1deg); }
+  80% { transform: translate(-1px, -1px) rotate(1deg); }
+  90% { transform: translate(1px, 2px) rotate(0deg); }
+  100% { transform: translate(1px, -2px) rotate(-1deg); }
+}
+
 /* Select the image with a class of kitty-1 */
-write-your-selector-here {
+ .kitty-1 {
   position: absolute;
   z-index: 1;
   top: 276px;
@@ -7,7 +26,7 @@ write-your-selector-here {
 }
 
 /* Select the image with id of kitty-2 */
-write-your-selector-here {
+#kitty-2 {
   position: absolute;
   z-index: 2;
   top: 212px;
@@ -15,7 +34,7 @@ write-your-selector-here {
 }
 
 /* Select the image inside the element with an id of basket (using its descendent relationship) */
-write-your-selector-here {
+#basket img:first-of-type {
   position: absolute;
   z-index: 5;
   top: 291px;
@@ -23,7 +42,7 @@ write-your-selector-here {
 }
 
 /* Select the image based on it being a sibling that follows immediately after the element with an id of ball (using adjacent sibling selector) */
-write-your-selector-here {
+#ball + img {
   position: absolute;
   z-index: 4;
   top: 260px;
@@ -31,7 +50,7 @@ write-your-selector-here {
 }
 
 /* Select the image that has an attribute value matching "Kitty 5" (using attribute selector) */
-write-your-selector-here {
+ img[src="images/kitty-5.png"]{
   position: absolute;
   z-index: 3;
   top: 217px;
